@@ -1,6 +1,7 @@
 #ifndef _hash_struct_h
 #define _hash_struct_h
 
+#include <string>
 struct script_data {
   int num_lines;
   time_t date;
@@ -8,9 +9,9 @@ struct script_data {
 };
 
 struct language_type_scripts {
-  char language[10];
+  std::string language;
   int tot_num_lines;
-  int date[3];
+  time_t date;
   struct language_type_scripts *language_head_predecessor;
 };
 
@@ -25,5 +26,7 @@ struct language_data {
 };
 
 void display_script_data(script_data *script_data_to_display);
+
+language_data* initialize_hash_structure(char *language);
 
 #endif
