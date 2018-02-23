@@ -15,6 +15,7 @@ int main() {
 
   // Testing the script_data structure initialization for each file in
   // directory tree of ./test_scripts
+  // test
   BOOST_FOREACH(boost::filesystem::path const &p, std::make_pair(it, eod)) {
       if (boost::filesystem::is_regular_file(p)) {
           std::cout << p.string() << std::endl;
