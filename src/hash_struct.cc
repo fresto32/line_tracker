@@ -1,16 +1,12 @@
-struct file_info_list_node {
-  int num_lines = 0;
-  int date[3];
-  struct file_info_list_node *predecessor_node;
-};
+#include <string>
+#include <vector>
+#include <iostream>
+#include <ctime>
+#include "hash_struct.h"
 
-struct array_info_head_node {
-  int tot_num_lines;
-  int date[3];
-  struct array_info_head_node *predecessor_head;
-};
-
-struct folder_directory_hash_array {
-  struct file_info_list_node[300];
-  struct array_info_head_node;
-};
+void display_script_data(script_data *script_data_to_display) {
+  // Displays # of lines and date of the script_data structure
+  std::cout << "Script Data\n";
+  std::cout << "# Of lines: " << script_data_to_display->num_lines << "\n";
+  std::cout << "Date: " << ctime(&script_data_to_display->date) << "\n\n";
+}
