@@ -21,7 +21,7 @@ struct hash_scripts_head {
 
 struct language_data {
   struct language_type_scripts language_type_data;
-  struct hash_scripts_head hash_keys[300];
+  struct hash_scripts_head hash_keys[257];
 };
 
 void display_script_data(script_data *script_data_to_display);
